@@ -4,14 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-/// <summary>
-/// G‚é‚Ì‹Ö~B
-/// </summary>
-public class LocerlSwipe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+
+public class AtsuSwipe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    //ã‚Éƒhƒ‰ƒbƒN‚µ‚½‚ÌƒCƒxƒ“ƒg
+    //ï¿½ï¿½Éƒhï¿½ï¿½ï¿½bï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌƒCï¿½xï¿½ï¿½ï¿½g
     public UnityEvent _dragUpEvent;
-    //‰º‚Éƒhƒ‰ƒbƒN‚µ‚½‚ÌƒCƒxƒ“ƒg
+    //ï¿½ï¿½ï¿½Éƒhï¿½ï¿½ï¿½bï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌƒCï¿½xï¿½ï¿½ï¿½g
     public UnityEvent _dragDownEvent;
 
     private float _dragStartPotisionY;
@@ -21,7 +19,7 @@ public class LocerlSwipe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         _dragStartPotisionY = eventData.position.y;
         _dragStartPotisionX = eventData.position.x;
-        //ƒXƒƒCƒv‚Æƒ{ƒ^ƒ“‚Ìˆ—‚ª“¯‚É‹N‚±‚ç‚È‚¢‚æ‚¤‚É
+        //ï¿½Xï¿½ï¿½ï¿½Cï¿½vï¿½Æƒ{ï¿½^ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É‹Nï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½æ‚¤ï¿½ï¿½
         if (TryGetComponent<LocerlButton>(out var _button)) _button._isAbleIvoke = false;
     }
 
@@ -37,14 +35,14 @@ public class LocerlSwipe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (_dragEndPotisionY - _dragStartPotisionY > 50 && _dragStartPotisionX - _dragEndPotisionX < 100 && _dragStartPotisionX - _dragEndPotisionX > -100)
         {
             _dragUpEvent?.Invoke();
-            Debug.Log("ã‚Éƒhƒ‰ƒbƒO");
+            Debug.Log("ï¿½ï¿½Éƒhï¿½ï¿½ï¿½bï¿½O");
         }
         else if (_dragEndPotisionY - _dragStartPotisionY < 50 && _dragStartPotisionX - _dragEndPotisionX < 100 && _dragStartPotisionX - _dragEndPotisionX > -100)
         {
             _dragDownEvent?.Invoke();
-            Debug.Log("‰º‚Éƒhƒ‰ƒbƒO");
+            Debug.Log("ï¿½ï¿½ï¿½Éƒhï¿½ï¿½ï¿½bï¿½O");
         }
-        //ƒXƒƒCƒv‚Æƒ{ƒ^ƒ“‚Ìˆ—‚ª“¯‚É‹N‚±‚ç‚È‚¢‚æ‚¤‚É
+        //ï¿½Xï¿½ï¿½ï¿½Cï¿½vï¿½Æƒ{ï¿½^ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É‹Nï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½æ‚¤ï¿½ï¿½
         if (TryGetComponent<LocerlButton>(out var _button)) _button._isAbleIvoke = true;
     }
 }

@@ -1,11 +1,10 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using UnityEngine.UI;
 
-public class LocerlDropImage : MonoBehaviour
+public class AtsuDropImage : MonoBehaviour
 {
     [SerializeField] private UnityEvent _event;
     public IvokeType _ivokeType;

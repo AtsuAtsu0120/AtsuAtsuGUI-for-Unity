@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Localization;
 
-public class LocerlDragImage : MonoBehaviour, IDragHandler, IEndDragHandler, IDropHandler
+public class AtsuDragImage : MonoBehaviour, IDragHandler, IEndDragHandler, IDropHandler
 {
     [SerializeField] private Canvas _canvas;
 
@@ -39,7 +39,7 @@ public class LocerlDragImage : MonoBehaviour, IDragHandler, IEndDragHandler, IDr
 
             if (_gameObj.TryGetComponent<LocerlDropImage>(out var _locerlDropImage))
             {
-                //ƒGƒ‰[‘Îô
+                //ï¿½Gï¿½ï¿½ï¿½[ï¿½Îï¿½
                 if (_locerlDropImage._ivokeType != _ivokeType) return;
 
                 _locerlDropImage._sprite = _sprite;

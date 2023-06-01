@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class LocerlSwipeLR : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class AtsuSwipeLR : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     //右にドラックした時のイベント
     public UnityEvent _dragRightEvent;

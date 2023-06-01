@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class LocerlLongPressButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class AtsuLongPressButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] private UnityEvent _longpressEvent;
     [SerializeField] private UnityEvent _pointerUpEvent;
@@ -41,7 +41,7 @@ public class LocerlLongPressButton : MonoBehaviour, IPointerDownHandler, IPointe
     {
         await UniTask.Delay(TimeSpan.FromSeconds(_pressSecond));
 
-        //ƒLƒƒƒ“ƒZƒ‹I
+        //ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½I
         if (_token.IsCancellationRequested) return;
 
         _isIvoked = true;
